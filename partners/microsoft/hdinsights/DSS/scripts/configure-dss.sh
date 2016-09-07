@@ -1,7 +1,7 @@
 #! /bin/bash
 echo "Configuration of DSS on the edge node"
 
-DSS=3.1.2
+#DSS=3.1.2
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -9,7 +9,6 @@ export LANGUAGE=en_US.UTF-8
 
 globalUpdate() {
 	echo "Updating the machine...";
-	sudo su
 	gpg --keyserver pgp.mit.edu --recv-keys B9733A7A07513CAD
 	gpg -a --export 07513CAD | apt-key add -
 	apt-get -y update
@@ -20,7 +19,6 @@ globalUpdate() {
 
 prepareInstall() {
 	echo "Preparing the install...";
-	sudo su
 	mkdir -p /mnt/dataiku
 	chown dataiku:dataiku /mnt/dataiku
 	echo "[ERROR] Failed to prepare install..."
@@ -29,8 +27,6 @@ prepareInstall() {
 
 installDSS() {
 	echo "Installing DSS...";
-	sudo su
-	su dataiku
 	cd /home/dataiku
 	mkdir -p /home/dataiku/installers
 	mkdir -p /home/dataiku/installers/dataiku
@@ -47,8 +43,6 @@ installDSS() {
 
 configureDSS() {
 	echo "Configuring DSS...";
-	sudo su
-	su dataiku
 	cd /mnt/dataiku/dss-data-dir
 	/mnt/dataiku/dss-data-dir/bin/dssadmin install-hadoop-integration
 	/mnt/dataiku/dss-data-dir/bin/dssadmin install-spark-integration
@@ -59,7 +53,9 @@ configureDSS() {
 	exit 135
 }
 
+sudo su
 globalUpdate
 prepareInstall
+su dataiku
 installDSS
 configureDSS
