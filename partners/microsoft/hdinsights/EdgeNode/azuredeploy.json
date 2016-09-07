@@ -35,7 +35,7 @@
     },
     "variables": {
         "clusterApiVersion": "2015-03-01-preview",
-        "applicationName": "edge_node"
+        "applicationName": "edge-node"
     },
     "resources": [{
         "name": "[concat(parameters('clusterName'),'/', variables('applicationName'))]",
