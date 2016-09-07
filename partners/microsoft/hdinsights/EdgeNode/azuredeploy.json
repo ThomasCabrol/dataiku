@@ -58,7 +58,7 @@
                 "roles": ["edgenode"]
             }],
             "uninstallScriptActions": [],			
-			"httpsEndpoints": [
+			"httpEndpoints": [
 				{
 					"subDomainSuffix": "dss",
 					"destinationPort": 20000,
