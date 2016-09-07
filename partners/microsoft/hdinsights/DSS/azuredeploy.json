@@ -13,7 +13,7 @@
             "metadata": {
                 "description" : "Any non-empty value is accepted. After the package is published, this parameter will be used to link the application install to the details about the application in the marketplace."
             },
-            "defaultValue": "Simple edge node"
+            "defaultValue": "Dataiku DSS 3.1.2"
         },
         "edgeNodeSize": {
             "type": "string",
@@ -35,7 +35,7 @@
     },
     "variables": {
         "clusterApiVersion": "2015-03-01-preview",
-        "applicationName": "edge-node"
+        "applicationName": "dss-312"
     },
     "resources": [{
         "name": "[concat(parameters('clusterName'),'/', variables('applicationName'))]",
@@ -54,7 +54,7 @@
             },
             "installScriptActions": [{
                 "name": "[concat('configure-edge-node','-' ,uniquestring(variables('applicationName')))]",
-                "uri": "https://raw.githubusercontent.com/ThomasCabrol/dataiku/master/partners/microsoft/hdinsights/EdgeNode/scripts/configure-edge-node.sh",
+                "uri": "https://raw.githubusercontent.com/ThomasCabrol/dataiku/master/partners/microsoft/hdinsights/DSS/scripts/configure-dss.sh",
                 "roles": ["edgenode"]
             }],
             "uninstallScriptActions": [],			
