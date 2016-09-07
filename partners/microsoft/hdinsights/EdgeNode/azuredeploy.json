@@ -54,7 +54,7 @@
             },
             "installScriptActions": [{
                 "name": "[concat('configure-edge-node','-' ,uniquestring(variables('applicationName')))]",
-                "uri": "https://raw.githubusercontent.com/hdinsight/Iaas-Applications/master/Hue/scripts/Hue-install_v0.sh",
+                "uri": "https://raw.githubusercontent.com/ThomasCabrol/dataiku/master/partners/microsoft/hdinsights/EdgeNode/scripts/configure-edge-node.sh",
                 "roles": ["edgenode"]
             }],
             "uninstallScriptActions": [],			
