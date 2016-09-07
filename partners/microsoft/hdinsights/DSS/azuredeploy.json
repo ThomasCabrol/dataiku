@@ -57,8 +57,8 @@
                 "uri": "https://raw.githubusercontent.com/ThomasCabrol/dataiku/master/partners/microsoft/hdinsights/DSS/scripts/configure-dss.sh",
                 "roles": ["edgenode"]
             }],
-            "uninstallScriptActions": [],			
-			"httpsEndpoints": [
+            "uninstallScriptActions": [],
+			"httpEndpoints": [
 				{
 					"subDomainSuffix": "dss",
 					"destinationPort": 20000,
