@@ -5,9 +5,9 @@
         "clusterName": {
             "value": "GEN-UNIQUE"
         },
-        "galleryPackageIdentity"; {
+        "galleryPackageIdentity": {
             "value": "Dataiku DSS 3.1.2"
-        }
+        },
         "edgeNodeSize": {
             "value": "Standard_D3"
         }
