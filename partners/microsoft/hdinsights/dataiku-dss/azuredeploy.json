@@ -87,10 +87,10 @@
     {
         "apiVersion": "2015-06-15",
         "type": "Microsoft.Network/networkSecurityGroups",
-        "name": "DSS security group",
+        "name": "dss-security-group",
         "location": "[resourceGroup().location]",
         "tags": {
-            "displayName": "DSS"
+            "displayName": "DSS Security Group"
         },
         "properties": {
             "securityRules": [
