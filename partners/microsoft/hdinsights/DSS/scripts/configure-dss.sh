@@ -1,6 +1,6 @@
 #! /bin/bash
 echo "[+] Configuration of DSS on the edge node"
-
+echo `whoami` > /tmp/whoami
 #DSS=3.1.2
 
 export LC_ALL=en_US.UTF-8
