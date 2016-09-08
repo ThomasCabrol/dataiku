@@ -26,4 +26,4 @@ Dataiku DSS is the perfect companion of your HDInsight cluster, thanks to the fo
 * interactively analyze large datasets using Jupyter Notebooks
 In any case, Dataiku DSS will leverage the underlying HDInsight cluster as much as possible to ensure maximum scalability and performance. 
 
-Want to know more? Feel free to <a href="http://www.dataiku.com/">visit our website</a> or to <a mailto="contact@dataiku.com">send us an email.</a>. 
+Want to know more? Feel free to <a href="http://www.dataiku.com/">visit our website</a> or to <a href="mailto:contact@dataiku.com">send us an email.</a>. 
