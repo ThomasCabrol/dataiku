@@ -90,7 +90,7 @@
         "name": "dss-security-group",
         "location": "[resourceGroup().location]",
         "tags": {
-            "displayName": "DSS Security Group"
+            "displayName": "dss-sg"
         },
         "properties": {
             "securityRules": [
