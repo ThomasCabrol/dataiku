@@ -1,6 +1,6 @@
 # Dataiku DSS on a HDInsight edge node
 
-<a href="https://portal.azure.com/#create/Microsoft.Template/uri/TBD.json" target="_blank">
+<a href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FThomasCabrol%2Fdataiku%2Fmaster%2Fpartners%2Fmicrosoft%2Fhdinsights%2Fdataiku-dss%2Fazuredeploy.json" target="_blank">
     <img src="http://azuredeploy.net/deploybutton.png"/>
 </a>
 
