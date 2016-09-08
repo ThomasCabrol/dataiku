@@ -23,16 +23,16 @@ mkdir -p /home/dataiku/installers
 mkdir -p /home/dataiku/installers/dataiku
 cd /home/dataiku/installers/dataiku
 wget http://downloads.dataiku.com/public/studio/3.1.2/dataiku-dss-3.1.2.tar.gz
-tar -xzf dataiku-dss-3.1.2.tar.gz
-rm dataiku-dss-3.1.2.tar.gz
-cd /home/dataiku/installers/dataiku/dataiku-dss-3.1.2/
-sudo sh -c '"/home/dataiku/installers/dataiku/dataiku-dss-3.1.2/scripts/install/install-deps.sh" -yes -without-java -with-r'
-/home/dataiku/installers/dataiku/dataiku-dss-3.1.2/installer.sh -p 20000 -d /mnt/dataiku/dss-data-dir
+#tar -xzf dataiku-dss-3.1.2.tar.gz
+#rm dataiku-dss-3.1.2.tar.gz
+#cd /home/dataiku/installers/dataiku/dataiku-dss-3.1.2/
+#sudo sh -c '"/home/dataiku/installers/dataiku/dataiku-dss-3.1.2/scripts/install/install-deps.sh" -yes -without-java -with-r'
+#/home/dataiku/installers/dataiku/dataiku-dss-3.1.2/installer.sh -p 20000 -d /mnt/dataiku/dss-data-dir
 
-echo "[+] Configuring DSS...";
-cd /mnt/dataiku/dss-data-dir
-/mnt/dataiku/dss-data-dir/bin/dssadmin install-hadoop-integration
-/mnt/dataiku/dss-data-dir/bin/dssadmin install-spark-integration
-/mnt/dataiku/dss-data-dir/bin/dssadmin install-h2o-integration
+#echo "[+] Configuring DSS...";
+#cd /mnt/dataiku/dss-data-dir
+#/mnt/dataiku/dss-data-dir/bin/dssadmin install-hadoop-integration
+#/mnt/dataiku/dss-data-dir/bin/dssadmin install-spark-integration
+#/mnt/dataiku/dss-data-dir/bin/dssadmin install-h2o-integration
 #/mnt/dataiku/dss-data-dir/bin/dssadmin install-R-integration
-/mnt/dataiku/dss-data-dir/bin/dss start
+#/mnt/dataiku/dss-data-dir/bin/dss start
