@@ -55,7 +55,8 @@
             "installScriptActions": [{
                 "name": "[concat('configure-edge-node','-' ,uniquestring(variables('applicationName')))]",
                 "uri": "https://raw.githubusercontent.com/ThomasCabrol/dataiku/master/partners/microsoft/hdinsights/EdgeNode/scripts/configure-edge-node.sh",
-                "roles": ["edgenode"]
+                "roles": ["edgenode"],
+                "parameters": "paramsfromtheUI1;paramsfromtheUI2 paramsfromtheUI3"
             }],
             "uninstallScriptActions": [],			
 			"httpEndpoints": [
