@@ -2,5 +2,5 @@
 echo "Doing nothing..."
 echo $@ 
 echo $@ > /tmp/all-args
-echo printenv 
-echo printenv > /tmp/all-printenv
+#echo printenv 
+#echo printenv > /tmp/all-printenv
