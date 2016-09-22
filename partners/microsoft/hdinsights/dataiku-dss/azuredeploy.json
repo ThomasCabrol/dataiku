@@ -74,7 +74,7 @@
                 "parameters": ""
             }],
             "uninstallScriptActions": [],
-            "httpEndpoints": [
+            "httpsEndpoints": [
                 {
                     "subDomainSuffix": "dss",
                     "destinationPort": 20000,
@@ -82,33 +82,6 @@
                 }
             ],
             "applicationType": "CustomApplication"
-        }
-    },
-    {
-        "apiVersion": "2015-06-15",
-        "type": "Microsoft.Network/networkSecurityGroups",
-        "name": "dss-security-group",
-        "location": "[resourceGroup().location]",
-        "tags": {
-            "displayName": "dss-sg"
-        },
-        "properties": {
-            "securityRules": [
-                {
-                    "name": "allow-dss",
-                    "properties": {
-                        "description": "Allow external traffic for DSS",
-                        "protocol": "Tcp",
-                        "sourcePortRange": "*",
-                        "destinationPortRange": "20000",
-                        "sourceAddressPrefix": "*",
-                        "destinationAddressPrefix": "*",
-                        "access": "Allow",
-                        "priority": 100,
-                        "direction": "Inbound"
-                    }
-                }
-            ]
         }
     }],
     "outputs": {
