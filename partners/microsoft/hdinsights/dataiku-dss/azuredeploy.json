@@ -13,7 +13,7 @@
             "metadata": {
                 "description" : "Any non-empty value is accepted. After the package is published, this parameter will be used to link the application install to the details about the application in the marketplace."
             },
-            "defaultValue": "Dataiku DSS 3.1.2"
+            "defaultValue": "Dataiku DSS 3.1.3"
         },
         "edgeNodeSize": {
             "type": "string",
@@ -50,7 +50,7 @@
     },
     "variables": {
         "clusterApiVersion": "2015-03-01-preview",
-        "applicationName": "dss-312"
+        "applicationName": "dss-313"
     },
     "resources": [{
         "name": "[concat(parameters('clusterName'),'/', variables('applicationName'))]",

@@ -22,10 +22,10 @@ chown dataiku:dataiku /mnt/dataiku
 mkdir -p /home/dataiku/installers
 mkdir -p /home/dataiku/installers/dataiku
 chown -R dataiku:dataiku /home/dataiku
-sudo -u dataiku sh -c "wget http://downloads.dataiku.com/public/studio/3.1.2/dataiku-dss-3.1.2.tar.gz -P /home/dataiku/installers/dataiku/"
-sudo -u dataiku sh -c "cd /home/dataiku/installers/dataiku/ ; tar -xzf dataiku-dss-3.1.2.tar.gz ; rm dataiku-dss-3.1.2.tar.gz"
-sudo -i "/home/dataiku/installers/dataiku/dataiku-dss-3.1.2/scripts/install/install-deps.sh" -yes -without-java -with-r
-sudo -u dataiku sh -c "/home/dataiku/installers/dataiku/dataiku-dss-3.1.2/installer.sh -p 20000 -d /mnt/dataiku/dss-data-dir"
+sudo -u dataiku sh -c "wget http://downloads.dataiku.com/public/studio/3.1.3/dataiku-dss-3.1.3.tar.gz -P /home/dataiku/installers/dataiku/"
+sudo -u dataiku sh -c "cd /home/dataiku/installers/dataiku/ ; tar -xzf dataiku-dss-3.1.3.tar.gz ; rm dataiku-dss-3.1.3.tar.gz"
+sudo -i "/home/dataiku/installers/dataiku/dataiku-dss-3.1.3/scripts/install/install-deps.sh" -yes -without-java -with-r
+sudo -u dataiku sh -c "/home/dataiku/installers/dataiku/dataiku-dss-3.1.3/installer.sh -p 20000 -d /mnt/dataiku/dss-data-dir"
 
 # Configuring & starting DSS
 sudo -u dataiku sh -c "/mnt/dataiku/dss-data-dir/bin/dssadmin install-hadoop-integration"
