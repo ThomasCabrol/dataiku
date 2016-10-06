@@ -3,5 +3,5 @@
     "description": "Adds an edge node to an existing HDInsight cluster and installs DSS on it.",
     "githubUsername": "ThomasCabrol",
     "summary": "Adds an edge node to an existing HDInsight cluster and installs DSS on it.",
-    "dateUpdated": "2016-09-08"
+    "dateUpdated": "2016-10-06"
 }
