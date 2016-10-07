@@ -2,13 +2,6 @@
 # Configures DSS on an HDInsight edge node
 # Assumes that the 'dataiku' user already exists, with a home directory
 
-# Do not forget to create the proper HDFS directories too!
-#   $ sudo su hdfs
-#   $ hdfs dfs -mkdir /user/dataiku
-#   $ hdfs dfs -mkdir /user/dataiku/dss_managed_datasets
-#   $ hdfs dfs -chown dataiku /user/dataiku
-#   $ hdfs dfs -chown dataiku /user/dss_managed_datasets
-
 
 # Settings
 DSS_VER="3.1.4"
@@ -51,6 +44,14 @@ sudo -u dataiku sh -c "
 $DSS_INS/installers/dataiku/dataiku-dss-$DSS_VER/scripts/install/install-deps.sh -yes -without-java -with-r
 
 sudo -u dataiku sh -c "$DSS_INS/installers/dataiku/dataiku-dss-$DSS_VER/installer.sh -p $DSS_PORT -d $DSS_DIR/dss-data-dir"
+
+# Preparing HDFS
+sudo -u hdfs sh -c "
+  hdfs dfs -mkdir /user/dataiku
+  hdfs dfs -mkdir /user/dataiku/dss_managed_datasets
+  hdfs dfs -chown dataiku /user/dataiku
+  hdfs dfs -chown dataiku /user/dataiku/dss_managed_datasets
+"
 
 # Configuring & starting DSS / full features
 sudo -u dataiku sh -c "
