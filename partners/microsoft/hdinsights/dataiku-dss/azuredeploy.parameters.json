@@ -9,7 +9,16 @@
             "value": "Dataiku DSS"
         },
         "edgeNodeSize": {
-            "value": "Standard_D3"
+            "value": "Standard_D12_v2"
+        },
+        "applicationName": {
+            "value": "dss"
+        },
+        "subdomainSuffix": {
+            "value": "dss"
+        },
+        "dssVersion": {
+            "value": "latest"
         }
     }
 }
