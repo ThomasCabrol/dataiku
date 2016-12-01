@@ -88,7 +88,7 @@ else
 	set -x
 	$kitName/installer.sh -d '$dataDir' -p '$port'
 	echo -e '\ndku.registration.channel=hdinsight-application' >>'$dataDir'/config/dip.properties
-    echo -e '\ndku.websocket.permessage-deflate.enabled=false' >>'$dataDir'/config/dip.properties
+	echo -e '\ndku.websocket.permessage-deflate.enabled=false' >>'$dataDir'/config/dip.properties
 fi
 echo '+ Installing DSS R integration'
 $dataDir/bin/dssadmin install-R-integration
