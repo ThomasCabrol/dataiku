@@ -88,8 +88,17 @@ else
 	set -x
 	$kitName/installer.sh -d '$dataDir' -p '$port'
 	echo -e '\ndku.registration.channel=hdinsight-application' >>'$dataDir'/config/dip.properties
-	echo -e '\ndku.websocket.permessage-deflate.enabled=false' >>'$dataDir'/config/dip.properties
 fi
+echo '+ Configuring Nginx for HDI'
+python2.7 -c '
+import sys, ConfigParser
+iniFile = \"$dataDir/install.ini\"
+config = ConfigParser.RawConfigParser()
+config.read(iniFile)
+config.set(\"server\", \"websocket_permessage_deflate\", \"false\")
+with open(iniFile, \"w\") as f:
+    config.write(f)
+'
 echo '+ Installing DSS R integration'
 $dataDir/bin/dssadmin install-R-integration
 if command -v spark-submit >/dev/null; then

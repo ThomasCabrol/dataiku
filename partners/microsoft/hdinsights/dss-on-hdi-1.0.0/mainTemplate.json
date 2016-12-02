@@ -8,6 +8,13 @@
                 "description": "Name of the existing HDInsight cluster where Dataiku DSS will be installed."
             }
         },
+        "galleryPackageIdentity": {
+            "type": "string",
+            "metadata": {
+                "description" : "Any non-empty value is accepted. After the package is published, this parameter will be used to link the application install to the details about the application in the marketplace."
+            },
+            "defaultValue": "Dataiku DSS"
+        },
         "edgeNodeSize": {
             "type": "string",
             "metadata": {

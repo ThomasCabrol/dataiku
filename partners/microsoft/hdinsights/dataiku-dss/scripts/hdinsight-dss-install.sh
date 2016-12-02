@@ -89,7 +89,7 @@ else
 	$kitName/installer.sh -d '$dataDir' -p '$port'
 	echo -e '\ndku.registration.channel=hdinsight-application' >>'$dataDir'/config/dip.properties
 fi
-echo '+ Configruing Nginx for HDI'
+echo '+ Configuring Nginx for HDI'
 python2.7 -c '
 import sys, ConfigParser
 iniFile = \"$dataDir/install.ini\"
